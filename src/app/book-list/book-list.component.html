@@ -1,0 +1,28 @@
+<div class="container">
+  <h3>รายการหนังสือ</h3>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Prices</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of Books">
+        <th scope="row">{{item.ID}}</th>
+        <td>{{item.Name}}</td>
+        <td>{{item.Prices}}</td>
+        <!-- <a [routerLink]="[ '/book',item.ID ]">Details</a> -->
+
+        <!-- <a [routerLink]="[ '/path', paramiter ]">Details</a> -->
+        <td>
+          <a [routerLink]="[ '/book',item.ID ]">
+            <button type="button" class="btn btn-info">Details</button>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
